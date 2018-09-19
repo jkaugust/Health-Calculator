@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang ="en">
+	<head>
+		<title>HEALT CALCULATOR</title>
+	</head>
+	<body>
+		<h2>Please Complete the following </h2>
+		<FORM action="/Users/JKA/eclipse-workspace/Health/input.pm" method = "POST">
+		
+		<div>
+			<br>
+			
+			<div class="label-align">
+				<label>First Name</label>
+				<input type = "text" name = "fname"/><br />
+			</div>
+			<br>
+			
+			<div class="label-align">
+				<label>Last Name</label>
+				<input type = "text" name = "lname"/><br />
+			</div>
+			<br>
+				
+			<div class="label-align">		
+		      	<label>Gender</label>
+		            <select id = "gen">
+           			<option value="">--Please choose an option--</option>
+					<option value="M">M</option>
+					<option value="F">F</option>
+					</select>
+			</div>
+			<br>
+					
+			<div class="label-align">					
+				<label>Age in years</label>
+		    	<input type = "number" name = "age"/><br />
+		    </div>
+		    <br>
+		
+			<div class="label-align">
+            	<label>Current Weight</label>
+            	<span id="weighterror"><span class="tip"></span>
+            	<input name="weight"  type="number" id="weight"  autocorrect="off">
+            	</span>
+            	<input name="weighttype" type="radio" class="rad" id="weighttype1" value="P" checked>
+            	<label for="weighttype1" class="inline">Pounds</label>
+            	<input name="weighttype" type="radio" class="rad" id="weighttype2" value="K">
+            	<label for="weighttype2" class="inline">Kilos</label>
+          	</div>
+          	<br>
+          	
+            <div class="label-align">
+            	<label>Height</label>
+            	<input name="height" type="radio" class="rad" id="heightFeet" value="F" checked onclick="showFeet();">
+            	<label class="inline" for="heightFeet">Feet &amp; Inches</label>
+            	<input name="height" type="radio" class="rad" id="heightCM" value="C" onclick="showCM();">
+            	<label  class="inline" for="heightCM">CMs</label>
+            	<div id="feetlabel">
+              	<label>Feet</label>
+              	<span id="feeterror"><span class="tip"></span>
+              	<input name="feet" type="number" id="feet" autocorrect="off" >
+              	</span>
+              	<label class="inline">Inches/CM</label>
+              	<span id="incheserror"><span class="tip"></span>
+              	<input name="inches" type="number"  id="inches" autocorrect="off">
+              	</span> </div>
+            	<div id="cmlabel" style="display:none;">
+              	<label>CM</label>
+              	<span id="cmerror"><span class="tip"></span>
+              	<input name="cm" type="number" id="cm" autocorrect="off">
+              	</span> </div>
+         	 </div>
+         	 <br>
+          
+		
+		<input type = "submit" value ="Submit" >
+		<br>
+		<input type="submit" name="cal" value="Calculate">
+		
+		</div>
+		
+		</FORM>
+	</body>
+</html>
+		
